@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "check": "pnpm lint:fix && pnpm lint:ts && pnpm lint:prettier",
+    "lint": "next lint",
+    "lint:fix": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
+    "lint:ts": "tsc",
+    "lint:prettier": "prettier --write ."
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",

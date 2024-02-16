@@ -1,6 +1,6 @@
 import { Resend } from 'resend'
 import * as React from 'react'
-import { EmailTemplate } from '@/components/emailTemplates/WelcomeEmail'
+import { WelcomeEmail } from '@/components/emailTemplates/WelcomeEmail'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -11,7 +11,7 @@ export async function POST() {
       from: 'Acme <onboarding@resend.dev>',
       to: ['delivered@resend.dev'],
       subject: 'Hello world',
-      react: EmailTemplate({ firstName: 'John' }) as React.ReactElement,
+      react: WelcomeEmail({ firstName: 'John' }) as React.ReactElement,
     })
 
     if (error) {
