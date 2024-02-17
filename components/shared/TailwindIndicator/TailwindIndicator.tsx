@@ -4,14 +4,14 @@ export function TailwindIndicator() {
   if (process.env.NODE_ENV === 'production') return null
 
   return (
-    <div className="fixed bottom-4 left-4 z-40 flex h-10 w-10 items-center justify-center rounded-full bg-stone-600 p-2 font-sans text-base font-semibold text-stone-200">
-      <div className="tablet:hidden block">
+    <div className="text-base fixed bottom-4 left-4 z-40 flex h-10 w-10 items-center justify-center rounded-full bg-stone-600 p-2 font-sans font-semibold text-stone-200">
+      <div className="block tablet:hidden">
         <MobileIcon className="h-6 w-6" />
       </div>
-      <div className="tablet:block desktop:hidden hidden ">
+      <div className="hidden tablet:block desktop:hidden ">
         <CardStackIcon className="h-6 w-6" />
       </div>
-      <div className="tablet:hidden desktop:block hidden ">
+      <div className="hidden tablet:hidden desktop:block ">
         <DesktopIcon className="h-6 w-6" />
       </div>
     </div>

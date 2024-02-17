@@ -5,7 +5,6 @@ module.exports = {
   extends: ['next/core-web-vitals', 'plugin:prettier/recommended'],
   rules: {
     // Add a rule to disable conflicting formatting for CSS classes
-    'prettier/prettier': ['error', { ignorePath: '.prettierignore' }],
     'react/jsx-sort-props': [2, { callbacksLast: true, shorthandFirst: true, ignoreCase: true, reservedFirst: true }],
     'no-console': ['warn'],
     eqeqeq: ['error'],
