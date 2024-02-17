@@ -1,0 +1,39 @@
+.scrolling-text-container {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  animation: scroll-rtl 6s linear infinite;
+  padding: 0 48px;
+  @apply font-heading text-2xl font-extrabold tracking-[0.03em];
+}
+
+.scrolling-text-2 {
+  white-space: nowrap;
+  animation: scroll-ltr 10s linear infinite;
+  padding: 0 48px;
+  @apply font-heading text-xl font-normal tracking-[0.03em];
+}
+
+@keyframes scroll-ltr {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-rtl {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}

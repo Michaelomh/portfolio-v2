@@ -1,0 +1,19 @@
+.title-animation {
+  animation: title-animate 3s linear infinite;
+  background: linear-gradient(to right, #fef9c3, #ef4444, #c2410c, #fef9c3);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+@keyframes title-animate {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: 200% center;
+  }
+}
