@@ -1,18 +1,26 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import localFont from 'next/font/local'
+import { Urbanist, JetBrains_Mono, PT_Mono } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
+import { TailwindIndicator } from '@/components/shared/TailwindIndicator/TailwindIndicator'
 
-const inter = Inter({
+const urbanist = Urbanist({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-urbanist',
 })
 
-const fraktion = localFont({
-  src: '../public/fonts/PPFraktionSans-Variable.ttf',
-  variable: '--font-fraktion',
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-jetbrains-mono',
+})
+
+const rubikMonoOne = PT_Mono({
+  weight: ['400'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-rubik-mono-one',
 })
 
 export const metadata: Metadata = {
@@ -26,8 +34,18 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html suppressHydrationWarning className="dark" lang="en">
-      <body className={cn('antialiased', inter.variable, fraktion.variable)}>{children}</body>
+    <html suppressHydrationWarning lang="en">
+      <body
+        className={cn(
+          'bg-stone-900 font-sans text-white antialiased',
+          urbanist.variable,
+          jetbrainsMono.variable,
+          rubikMonoOne.variable,
+        )}
+      >
+        {children}
+        <TailwindIndicator />
+      </body>
     </html>
   )
 }

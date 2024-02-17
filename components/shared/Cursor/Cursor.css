@@ -1,0 +1,23 @@
+.cursor {
+  display: none;
+  position: fixed;
+  animation: cursor-breathing 3s infinite alternate-reverse;
+  z-index: -999;
+  background: #f4b432;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(70px);
+  transform: translate(-50%, -50%);
+}
+
+@keyframes cursor-breathing {
+  0% {
+    filter: blur(60px);
+  }
+
+  100% {
+    filter: blur(70px);
+  }
+}
