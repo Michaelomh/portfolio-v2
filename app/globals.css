@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply cursor-default font-mono font-semibold uppercase text-white;
+  }
+
+  p {
+    @apply cursor-default  font-sans text-white;
+  }
+}

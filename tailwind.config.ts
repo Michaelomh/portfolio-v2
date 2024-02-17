@@ -7,17 +7,33 @@ const config = {
   content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
   prefix: '',
   theme: {
-    container: {
-      center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px',
-      },
+    screens: {
+      // screen are overriden (no xs:, sm:, md:, lg:, xl:)
+      // mobile (< 768px)
+      // tablet (768px - 1280px)
+      tablet: '768px',
+      // desktop (> 1280px)
+      desktop: '1280px',
+    },
+    fontSize: {
+      xs: ['16px', { lineHeight: '24px' }],
+      sm: ['18px', { lineHeight: '28px' }],
+      lg: ['20px', { lineHeight: '28px' }],
+      xl: ['28px', { lineHeight: '36px' }],
+      '2xl': ['36px', { lineHeight: '48px' }],
+      '3xl': ['48px', { lineHeight: '56px' }],
+      '4xl': ['56px', { lineHeight: '64px' }],
+      '5xl': ['80px', { lineHeight: '80px' }],
     },
     extend: {
+      boxShadow: {
+        'new-sm': '0px 2px 4px 0px rgba(11, 10, 55, 0.15)',
+        'new-lg': '0px 8px 20px 0px rgba(18, 16, 99, 0.06)',
+      },
       fontFamily: {
-        sans: ['var(--font-inter)', ...fontFamily.sans],
-        mono: ['var(--font-fraktion)', ...fontFamily.mono],
+        sans: ['var(--font-urbanist)', ...fontFamily.sans],
+        heading: ['var(--font-jetbrainsMono)', ...fontFamily.sans],
+        mono: ['var(--font-rubik-mono-one)', ...fontFamily.mono],
       },
       keyframes: {
         'accordion-down': {
