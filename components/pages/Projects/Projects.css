@@ -1,41 +1,4 @@
-.video-card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.video-card {
-  background: white;
-  width: 350px;
-  height: 300px;
-  margin: 15px;
-  overflow: hidden;
-  border-radius: 16px;
-}
-
-.video-card-body {
-  position: relative;
-}
-
-.video-thumbnail {
-  position: relative;
-  max-width: 350px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.video-thumbnail .thumb-img {
-  position: absolute;
-  width: 100%;
-}
-
-.video-thumbnail .thumb-video {
-  position: absolute;
-  width: 102%;
-  height: 102%;
-  opacity: 0;
+/* NOT DONE YET, Try to find the right colors */
+.project-card {
+  @apply bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-pink-200 via-orange-500 to-amber-100;
 }
