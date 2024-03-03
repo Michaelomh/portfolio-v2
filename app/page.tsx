@@ -1,5 +1,6 @@
-import { Introduction, Newsletter } from '@/components/pages'
-import { ProjectCard } from '@/components/pages/Projects/ProjectCard'
+import Introduction from '@/components/pages/Introduction/Introduction'
+import Newsletter from '@/components/pages/Newsletter/Newsletter'
+import Projects from '@/components/pages/Projects/Projects'
 import Cursor from '@/components/shared/Cursor/Cursor'
 
 export default function Home() {
@@ -8,7 +9,8 @@ export default function Home() {
       <Cursor />
 
       <Introduction />
-      <ProjectCard />
+      <Projects />
+      {/* <Articles /> */}
       <Newsletter />
     </main>
   )

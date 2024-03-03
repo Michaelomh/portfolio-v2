@@ -1,6 +1,6 @@
 import './Introduction.css'
 
-export const Introduction = () => {
+export default async function Introduction() {
   return (
     <div>
       <div>
